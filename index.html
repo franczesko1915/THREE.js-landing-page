@@ -1,0 +1,125 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Six+Caps&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="waterbg"></div>
+        <div class="container">
+            <div class="title">
+                <div class="title-1">Spectacular Series of</div>
+                <div class="title-2">Events that will</div>
+                <div class="title-3">Unwind You.</div>
+            </div>
+            <p>Join us for a jurney into the unknown and wow your senses</p>
+        </div>
+        <div class="img"></div>
+        <div class="cursor"></div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="hover.js"></script>
+
+    <script>
+          let textWrapper = document.querySelector('.title-1')
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        let textWrapper2 = document.querySelector('.title-2')
+        textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        let textWrapper3 = document.querySelector('.title-3')
+        textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        let tl = gsap.timeline();
+
+        tl.to('.title-1 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', stagger: '.03'})
+        tl.to('.title-2 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',stagger: '.03'}, "-=.7")
+        tl.to('.title-3 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',stagger: '.03'}, "-=.7")
+        tl.from('p', {opacity: 0, y: '-50px'}, "-=.7")
+
+        tl.to('.img', {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', ease: Back.easeOut.config(1.7), duration: .75}, "-=.5")
+        var myAnimation = new hoverEffect({
+            parent: document.querySelector('.img'),
+            intensity: 0.3,
+            image1: 'assets/abstract1.jpg',
+            image2: 'assets/abstract2.jpg',
+            displacementImage: 'assets/dis.jpg'
+        });
+        let title = document.querySelector('.container');
+        let img = document.querySelector('.img');
+        let cursorCircle = document.querySelector('.cursor');
+
+        let cursor = {
+            x: 0,
+            y: 0
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.x = -e.clientX * .1;
+            cursor.y = -e.clientY * .1;
+
+            img.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+            cursorCircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+        })
+
+
+    </script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+            <div class="logo">OceanWave</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+             
+            </ul>
+    </header>
+    
+
+    <div class="line-container">
+
+            <svg  viewBox="0 0 242 1138" fill="none" preserveAspectRatio='xMidYMax meet'>
+                <path d="M107.5 0.5V449.5C139 442.5 209.4 441.7 239 494.5C231.167 510 203.2 542.2 154 547C104.8 551.8 35.1667 486.667 6.50004 453.5V534.5C36.1667 499 107.2 432.3 154 449.5V960C176.333 961.167 215 972.8 191 1010H175.5V1117.5C176.5 1124.83 173.6 1138.4 154 1134H146.5C150.833 1115.67 147.5 1080.1 99.5001 1084.5C133.5 1084.5 150.5 1104 141.5 1134H43C26.1667 1132.83 -14.3052 1114.82 11.5 1084.5C31.5 1061 47 1025 16 1002C27.3334 1003.5 45.5 1030 40 1062C34.5 1084.5 8.50004 1112.7 34.5 1117.5H53.5C51.1667 1086.83 60.0001 1023.6 114 1016L116 960C122.833 946.667 138.5 925.2 146.5 946V960" stroke="#FF0000" stroke-width="5"/>
+                </svg>
+                
+            
+    </div>
+
+    <section class="one">
+        <h1 class="scroll" data-rate=".4" data-direction="vertical">ocean stuff</h1>
+    </section>
+
+    <section class="two">
+        <h1 class="scroll" data-rate=".2" data-direction="vertical">omg scroll</h1>
+        <p>big watermark</p>
+    </section>
+
+
+    <script src="/app.js"></script>
+    
+</body>
+>>>>>>> cb9dc49756b44e18ea072e200d8fd28bf7eda6cc
+</html>

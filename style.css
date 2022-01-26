@@ -1,0 +1,244 @@
+<<<<<<< HEAD
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ecebda;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  top: 0;
+}
+
+.container {
+  margin-left: -50%;
+}
+
+.title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 10rem;
+  line-height: 10.5rem;
+  pointer-events: none;
+  position: relative;
+}
+
+.title:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 3px;
+  background: black;
+  left: -15%;
+  top: 15%;
+}
+
+.title .title-2,
+.title .title-3 {
+  position: relative;
+  z-index: 2;
+}
+
+p {
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+
+.waterbg {
+  position: absolute;
+  width: 30%;
+  height: 100vh;
+  z-index: -1;
+  background: url("./assets/girl.jpg");
+  background-size: cover;
+  mix-blend-mode: luminosity;
+  opacity: 0.17;
+  right: 0;
+}
+
+.img {
+  position: absolute;
+  width: 16em;
+  height: 27em;
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.cursor {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin-left: -1.5em;
+  margin-top: -1.5em;
+}
+
+.letter {
+  display: inline-block;
+  line-height: 1em;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+.img:hover {
+  opacity: 0.5;
+=======
+body {
+  height: 500vh;
+  margin: 0;
+  font-family: "Garamond";
+}
+
+.line-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+svg {
+  display: inline-block;
+  height: 100%;
+}
+
+section {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-size: 4em;
+}
+
+.one {
+  background: url("/img/one.jpg");
+  background-size: cover;
+}
+
+.two {
+  font-size: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+p {
+  position: absolute;
+  z-index: -1;
+  color: #f1f1f1;
+  top: 10%;
+  left: 20%;
+  white-space: nowrap;
+  font-size: 20rem;
+}
+
+header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  position: relative;
+  text-decoration: none;
+  margin-left: 20px;
+  color: black;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  height: 10vh;
+  width: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+}
+
+header ul li a:hover {
+  background: black;
+  color: white;
+}
+
+.sticky {
+  background: black;
+}
+
+.sticky a {
+  color: white;
+}
+
+.sticky a:hover {
+  color: black;
+  background: white;
+}
+
+.sticky .logo {
+  color: white;
+>>>>>>> cb9dc49756b44e18ea072e200d8fd28bf7eda6cc
+}
+/*# sourceMappingURL=style.css.map */
